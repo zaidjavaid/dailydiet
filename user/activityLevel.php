@@ -6,15 +6,12 @@
 </head>
 
 <body>
-
 	<?php include('header.php'); ?>
 	<?php include('menu.php');
 
 	include("../admin/db.php");
 
-
 	?>
-
 	<div class="restsection">
 
 		<div class="container" style="width: 40%; margin-left: 30%">
@@ -30,19 +27,11 @@
 						<option value="1.375"> lightly active: 1.375</option>
 						<option value="1.55"> moderately active: 1.55</option>
 						<option value="1.725"> very active: 1.725</option>
-
-
 					</select>
 				</div>
-
-
-
-
 				<input type="submit" name="btn" class="btn-danger btn form-control" value="Add ">
 			</form>
 		</div>
-
-
 		<?php
 		if (isset($_POST['btn'])) {
 			include('../admin/db.php');
@@ -50,8 +39,6 @@
 			mysqli_query($con, "update users set activityLevel='" . $_POST['activityLevel'] . "' where email='" . $_SESSION['loggedInUser'] . "'");
 			echo "<div style='text-align:center; padding:10px; color:black'> activityLevel added! </div>";
 		}
-
-
 		?>
 		<ol>
 			<li><b> Note:</b></li>
@@ -88,7 +75,6 @@
 </body>
 
 </html>
-
 
 <style type="text/css">
 	.restsection {
