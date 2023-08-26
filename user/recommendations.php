@@ -50,10 +50,6 @@
 		$dailyCalories = $bmr * $activityLevel;
 
 
-
-
-
-
 		// Input data (you can replace these values with your actual data)
 		$age = $r['age']; // Age in years
 		$height_cm =  $r['height']; // Height in centimeters

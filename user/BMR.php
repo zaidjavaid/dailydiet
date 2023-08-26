@@ -50,10 +50,6 @@
 			mysqli_query($con, "UPDATE users SET TDEE='" . $dailyCalories . "' where email='" . $_SESSION['loggedInUser'] . "'");
 		}
 
-
-
-
-
 		?>
 
 		<!-- basal metabolic rate (BMR)  -->
