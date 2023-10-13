@@ -31,7 +31,7 @@ To run this project locally on your machine, you'll need to have XAMPP or a simi
 
 - **User Registration and Login:** Create an account or log in to an existing one to track your diet.
 
-- **Record Meals:** Add information about your daily meals, including name, date&time, meal type and intake quantity.
+- **Record Meals:** Add information about your daily meals, including Food name, date and time, meal type and intake quantity.
 
 - **Dashboard:** View a summary of your daily calorie intake and track your progress.
 
