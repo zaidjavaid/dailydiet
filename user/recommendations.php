@@ -105,14 +105,18 @@
 			echo "<br>";
 		}
 		$today = date("d-m-Y");
-		echo $today;
+		// echo $today;
 
+		echo "</br>";
+		echo "<hr>";
 		echo "<div >Your estimated daily caloric needs are: <b >" . number_format($dailyCalories, 3) . "</b> calories</div>";
+		echo "<hr>";
 
 
 		?>
 
 	</div>
+
 </body>
 
 </html>

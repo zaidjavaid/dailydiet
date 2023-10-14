@@ -15,9 +15,13 @@
     <p>Nutritional content of Yours food intake</p>
 
     <?php
+
     include('../admin/db.php');
     $today = date("Y-m-d");
-    // echo $today;
+    $t = date("d-m-Y");
+    echo "<hr>";
+    echo "<p style='font-size:18px'><strong>Date:</strong> <i>$t</i></p>";
+    echo "<hr>";
 
     $res2 = mysqli_query($con, "SELECT * from foodlog JOIN fooditems on foodlog.foodid= fooditems.foodid where userid='" . $_SESSION['loggedInUserId'] . "' && logdatetime='$today'  ");
 
@@ -50,18 +54,36 @@
 
     echo "<div class='alert alert-danger'>Protein: <b >" . $totalNutrients['protein'] . "</b> </div>";
     echo "<div class='alert alert-warning'>Fats: <b >" . $totalNutrients['fats'] . "</b> </div>";
-    // echo "cal " .$totalNutrients['calories'];
-    // echo "<br>";
-    // echo $totalNutrients['carbohydrates'];
-    //  echo "<br>";
-    // echo $totalNutrients['protein'];
-    //  echo "<br>";
-    // echo $totalNutrients['fats'];
+
+
+
+
+    //  The SQL query to get the TDEE value
+    $query = "SELECT TDEE FROM users WHERE id = '" . $_SESSION['loggedInUserId'] . "'";
+    $result = mysqli_query($con, $query);
+
+    if ($result) {
+      $row = mysqli_fetch_assoc($result);
+      $TDEE = $row['TDEE'];
+      echo "<br>";
+      echo "You need to consume approx <b>" . $TDEE . "</b> calories per day";
+
+      if ($totalNutrients['calories'] >= $TDEE) {
+        echo "</br>";
+        echo "<hr>";
+        echo "<div class='alert alert-success'><b>Congratulation <i>Target ACHIEVED</i></b></div>";
+        echo "<hr>";
+      } else {
+        echo "</br>";
+        echo "<hr>";
+        echo "<div class='alert alert-danger'><strong><i>Today's Target Yet NOT ACHIEVED</i></strong></div>";
+        echo "<hr>";
+      }
+    }
+
+
 
     ?>
-
-
-
   </div>
 </body>
 

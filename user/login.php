@@ -44,13 +44,13 @@ ob_start();
 
     <a style="text-align: center; align-items:center; justify-content:center; " href="forgotpassword.php">Forgot Password</a>
     <br>
-    <a style="text-align: right; align-items:right; justify-content:right; " href="../index.php">Back to Home</a>
 
+    <a style="text-align: right; align-items:right; justify-content:right; " href="../index.php">Back to Home</a>
+    <br>
+    <p id="para"></p>
 
   </div>
-  <?php
-  // include_once('../footer.php');
-  ?>
+
 </body>
 
 </html>
@@ -76,7 +76,11 @@ if (isset($_POST['btn'])) {
       exit;
     }
   } else {
-    echo "<div style='text-align:center; padding:10px; color:red'> Invalid Email/Password. Please try again </div>";
+    // echo "<div style='text-align:center; padding:10px; color:red'> Invalid Email/Password. Please try again </div>";
+    echo "<script>
+        let para = document.getElementById('para');
+        para.innerHTML = '<div style=\"text-align:center; padding:10px; color:red\">Invalid Email/Password. Please try again</div>';
+    </script>";
   }
 }
 

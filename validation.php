@@ -36,28 +36,15 @@
             }
         });
 
-        //phone number
+        // number Validation 
 
-        // $('#Number').keypress(function(event) {
-        //     var keycode = event.which;
-        //     if (!(event.shiftKey == false && (keycode == 46 || keycode == 8 || keycode == 37 || keycode == 39 || (keycode >= 48 && keycode <= 57)))) {
-        //         event.preventDefault();
-        //     }
-        // });
+        $('#Num').keypress(function(event) {
+            var keycode = event.which;
+            if (!(event.shiftKey == false && (keycode == 46 || keycode == 8 || keycode == 37 || keycode == 39 || (keycode >= 48 && keycode <= 57)))) {
+                event.preventDefault();
+            }
+        });
 
-
-        // $('#Number2').keypress(function(event) {
-        //     var keycode = event.which;
-        //     if (!(event.shiftKey == false && (keycode == 46 || keycode == 8 || keycode == 37 || keycode == 39 || (keycode >= 48 && keycode <= 57)))) {
-        //         event.preventDefault();
-        //     }
-        // });
-        // $('#Number3').keypress(function(event) {
-        //     var keycode = event.which;
-        //     if (!(event.shiftKey == false && (keycode == 46 || keycode == 8 || keycode == 37 || keycode == 39 || (keycode >= 48 && keycode <= 57)))) {
-        //         event.preventDefault();
-        //     }
-        // });
 
 
     });

@@ -25,8 +25,9 @@
         <li><a href="index.php">Home</a> </li>
         <li><a href="about.php">About Us</a> </li>
         <li><a href="blogs.php">Blogs</a> </li>
+        <!-- <li><a href="faq.html">FAQs</a> </li> -->
 
-        <li><a href="user/signup.php">Sign Up</a> </li>
+        <li><a href="user/signup.php">Register</a> </li>
         <li><a href="user/login.php">Login</a> </li>
         <li><a href="admin/login.php">Admin</a> </li>
       </ul>

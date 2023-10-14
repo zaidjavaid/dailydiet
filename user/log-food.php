@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<?php include('../validation.php'); ?>
 	<title></title>
 </head>
 
@@ -15,10 +16,6 @@
 	include("../admin/db.php");
 
 	$res = mysqli_query($con, "select * from fooditems ");
-
-
-
-
 	?>
 
 	<div class="restsection">
@@ -30,11 +27,11 @@
 
 				<div class="form-group">
 					<label>Food Item</label>
-					<select class="form-control" name="foodid">
-						<option>----Select-----</option>
+					<select class="form-control" name="foodid" required>
+						<option value="">----Select-----</option>
 						<?php
 						while ($r = mysqli_fetch_assoc($res)) {
-							echo "<option value='$r[foodid]'>" . $r['foodname'] . " " . $r['calories'] . " Calories " . "</option>";
+							echo "<option value='$r[foodid]' >" . $r['foodname'] . " " . $r['calories'] . " Calories " . "</option>";
 						}
 
 						?>
@@ -46,8 +43,8 @@
 
 				<div class="form-group">
 					<label for="meal">Meal Time</label>
-					<select name="meal_type" id="meal" class="form-control">
-						<option value="Breakfast">Select Meal Time</option>
+					<select name="meal_type" id="meal" class="form-control" required>
+						<option value="" required>Select Meal Time</option>
 						<option value="Breakfast">Breakfast</option>
 						<option value="Lunch">Lunch</option>
 						<option value="Dinner">Dinner</option>
@@ -58,14 +55,14 @@
 
 				<div class="form-group">
 					<label>Food Log Date Time</label>
-					<input name="logdatetime" type="date" name="date-time" class="form-control">
+					<input name="logdatetime" type="date" name="date-time" class="form-control" required>
 				</div>
 
 
 
 				<div class="form-group">
 					<label>Food Quanltity</label>
-					<input placeholder="100 gram" name="qnty" type="text" name="height" class="form-control">
+					<input placeholder="100 gram" name="qnty" type="text" maxlength="3" minlength="1" id="Num" class="form-control" required>
 				</div>
 
 

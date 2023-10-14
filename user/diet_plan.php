@@ -24,14 +24,17 @@ if (isset($_POST['generate'])) {
 
     $tdee = 0;
 
-    $sql = "SELECT TDEE FROM users WHERE email='" . $_SESSION['loggedInUser'] . "'";
+    $sql = "SELECT TDEE FROM users WHERE email='" . $_SESSION['loggedInUser'] . "' && id='" . $_SESSION['loggedInUserId'] . "'";
     $result = mysqli_query($con, $sql);
+
     if ($result) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            // Process each row in the result set
-            $tdee = $row['TDEE'];
-        }
-    } else $tdee = 0;
+        $row = mysqli_fetch_assoc($result);
+        $tdee = $row['TDEE'];
+        // while ($row = mysqli_fetch_assoc($result)) {
+        //     // Process each row in the result set
+        //     $tdee = $row['TDEE'];
+        // }
+    }
 
     // Get food items based on TDEE
     $foodItems = getFoodItemsForTDEE($tdee);

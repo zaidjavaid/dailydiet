@@ -17,20 +17,20 @@ if (isset($_GET['delete_id'])) {
 
     $stmt->close();
 }
-if (isset($_GET['delete_id'])) {
-    $deleteId = $_GET['delete_id'];
-    // Prepare and execute the DELETE query
-    $sql = "DELETE FROM foodlog WHERE userid = ?";
-    $stmt = $con->prepare($sql);
-    $stmt->bind_param("i", $deleteId); // 'i' indicates integer parameter
-    if ($stmt->execute()) {
-        echo "User with ID $deleteId has been removed successfully.";
-    } else {
-        echo "Error removing user: " . $stmt->error;
-    }
+// if (isset($_GET['delete_id'])) {
+//     $deleteId = $_GET['delete_id'];
+//     // Prepare and execute the DELETE query
+//     $sql = "DELETE FROM foodlog WHERE userid = ?";
+//     $stmt = $con->prepare($sql);
+//     $stmt->bind_param("i", $deleteId); // 'i' indicates integer parameter
+//     if ($stmt->execute()) {
+//         echo "User with ID $deleteId has been removed successfully.";
+//     } else {
+//         echo "Error removing user: " . $stmt->error;
+//     }
 
-    $stmt->close();
-}
+//     $stmt->close();
+// }
 
 // Retrieve user data
 $sql = "SELECT id, name, email,status FROM users";
@@ -76,7 +76,6 @@ $result = $con->query($sql);
             echo "<td> Email </td>";
             echo "<td> Status </td>";
             echo "<td> Operation </td>";
-
 
             echo "</tr>";
         }

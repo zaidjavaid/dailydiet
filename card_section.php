@@ -61,17 +61,17 @@
             justify-content: center;
         }
 
-        .green-button {
+        .red-button {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: green;
+            padding: 20px 30px;
+            background-color: red;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 10px;
             transition: transform 0.3s;
         }
 
-        .green-button:hover {
+        .red-button:hover {
             background-color: darkorchid;
             transform: scale(1.2);
             color: white;
@@ -122,6 +122,10 @@
         #btn1:hover {
             background-color: #3498db;
         }
+
+        #button-container {
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -130,9 +134,11 @@
     <div class="contain">
         <div class=" content">
             <h4 style="color: green;"> YOUR DAILY ASSISTANT</h4>
+            <br>
             <h2>A step-by-step guide through the process of creating your diet</h2>
+            <br>
 
-            <p>Our team has developed a simple and easy to use diet diary builder.
+            <p>We have developed a simple and easy to use diet diary builder.
 
                 It is powered by a constantly expanding range of new and proven products.</p>
 
@@ -150,6 +156,7 @@
         </span>
         <h2>Tips & Tricks</h2>
         <p>There are some useful articles in this section that provide lots of helpful information. This is not only information on building a diet, but also information on the characteristics of individual products, their use, practical tips and many other interesting tips.</p>
+        <br>
         <div class="row card-section">
 
 
@@ -182,7 +189,11 @@
                         <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
                     </div>
                 </div>
+                <br>
+                <br>
+
             </div>
+
             <div class="col-md-4">
                 <div class="card">
                     <img src="image/nuts-card.jpg" class="card-img-top" alt="Image 1">
@@ -213,15 +224,15 @@
                     </div>
                 </div>
             </div>
-            <!-- <a href="/user_panel.php"></a> -->
-            <button id="btn" class="green-button">Get Started</button>
+
+        </div>
+        <br>
+        <br>
+        <div id="button-container">
+            <a href="user/signup.php" id="btn2" type="button" class="red-button">Get Started</a>
         </div>
     </div>
 
 </body>
 
 </html>
-<?php
-
-
-?>

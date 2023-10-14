@@ -48,10 +48,10 @@
     <div class="all_info">
       <h4>Why Daily Diet?</h4>
       <ul>
-        <li> <a target="_blank">Easy to use</a> </li>
-        <li> <a target="_blank">Accessible</a> </li>
-        <li> <a target="_blank">Customizable</a> </li>
-        <li> <a target="_blank">Free</a> </li>
+        <li> <a target="_blank">> Easy to use</a> </li>
+        <li> <a target="_blank">> Accessible</a> </li>
+        <li> <a target="_blank">> Customizable</a> </li>
+        <li> <a target="_blank">> Free</a> </li>
       </ul>
     </div>
 

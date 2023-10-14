@@ -69,6 +69,9 @@
 	<?php
 	include 'card_section.php';
 	?>
+
+	<br>
+	<br>
 	<hr>
 
 	<!-- <div style="padding: 50px;" id="about">
@@ -89,6 +92,7 @@
 
 		<iframe width="660" height="415" src="https://www.youtube.com/embed/XMcab1MFaLc" frameborder="0" allowfullscreen></iframe>
 	</div>
+
 	<hr>
 	<section id="feedback">
 		<h2>Feedback</h2>
@@ -105,8 +109,6 @@
 			<button type="submit">Submit Feedback</button>
 		</form>
 	</section>
-
-
 
 	<?php
 	include 'footer.php';

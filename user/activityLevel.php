@@ -38,6 +38,7 @@
 
 			mysqli_query($con, "update users set activityLevel='" . $_POST['activityLevel'] . "' where email='" . $_SESSION['loggedInUser'] . "'");
 			echo "<div style='text-align:center; padding:10px; color:black'> activityLevel added! </div>";
+			header("location:BMR.php");
 		}
 		?>
 		<ol>
