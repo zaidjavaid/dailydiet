@@ -65,7 +65,9 @@ if (isset($_POST['btn'])) {
   body {
     margin: 0;
     background-color: whitesmoke;
-    background-image: url('../images/5.jpg');
+    /* background-image: url('../images/5.jpg');
+     */
+    background-image: url('https://img.freepik.com/free-vector/abstract-technology-particle-background_52683-25766.jpg?w=826&t=st=1697261024~exp=1697261624~hmac=291ccace7cdded74001554b3efd93d54394ce5efab6ec16d9dfa54e6808e9369');
     background-size: 300px 300px;
 
   }

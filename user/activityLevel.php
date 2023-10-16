@@ -21,12 +21,12 @@
 
 				<div class="form-group">
 					<label>Activity level</label>
-					<select class="form-control" name="activityLevel">
-						<option> ----select activity level----</option>
-						<option value="1.2">sedentary: 1.2 </option>
-						<option value="1.375"> lightly active: 1.375</option>
-						<option value="1.55"> moderately active: 1.55</option>
-						<option value="1.725"> very active: 1.725</option>
+					<select class="form-control" name="activityLevel" required />
+					<option value="" required> ----select activity level----</option>
+					<option value="1.2">sedentary: 1.2 </option>
+					<option value="1.375"> lightly active: 1.375</option>
+					<option value="1.55"> moderately active: 1.55</option>
+					<option value="1.725"> very active: 1.725</option>
 					</select>
 				</div>
 				<input type="submit" name="btn" class="btn-danger btn form-control" value="Add ">
@@ -38,7 +38,7 @@
 
 			mysqli_query($con, "update users set activityLevel='" . $_POST['activityLevel'] . "' where email='" . $_SESSION['loggedInUser'] . "'");
 			echo "<div style='text-align:center; padding:10px; color:black'> activityLevel added! </div>";
-			header("location:BMR.php");
+			header("location:goal.php");
 		}
 		?>
 		<ol>

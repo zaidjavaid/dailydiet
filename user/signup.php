@@ -47,11 +47,13 @@ ob_start();
         Male <input type="radio" name="gender" value="male" checked>
         Female <input type="radio" name="gender" value="female">
         <br><br>
-        <input type="password" minlength="6" maxlength="20" placeholder="Password (minimum 6 characters)" name='pass' required/class="all">
-
-
+        <input type="password" minlength="6" maxlength="20" placeholder="Password (minimum 6 characters)" name='pass' required/ class="all">
 
         <button type='submit' name='btn'>Sign Up</button>
+        <br>
+        <hr>
+        <p class="text-center">Do You Want to: <a href="login.php">Log in</a></p>
+        <p id="para"></p>
       </form>
     </div>
 
@@ -62,12 +64,27 @@ ob_start();
 
 <?php
 if (isset($_POST['btn'])) {
-  include('../admin/db.php');
 
-  mysqli_query($con, "insert into users (name,email, age, gender,pass,height,weight) value('" . ucwords($_POST['name']) . "', '" . $_POST['email'] . "', '" . $_POST['age'] . "', '" . $_POST['gender'] . "', '" . $_POST['pass'] . "', '" . $_POST['height'] . "', '" . $_POST['weight'] . "')");
+  $email = $_POST['email'];
 
-  echo "<div style='text-align:center; padding:10px; color:black'> Account Created! Please Login! </div>";
-  header('location:login.php');
+  // Regular expression pattern for email validation
+  $pattern = "/^[A-Za-z0-9._%+-]+@([A-Za-z0-9-]+\.)+com$/";
+
+  if (preg_match($pattern, $email)) {
+
+    include('../admin/db.php');
+
+    mysqli_query($con, "insert into users (name,email, age, gender,pass,height,weight) value('" . ucwords($_POST['name']) . "', '" . $_POST['email'] . "', '" . $_POST['age'] . "', '" . $_POST['gender'] . "', '" . $_POST['pass'] . "', '" . $_POST['height'] . "', '" . $_POST['weight'] . "')");
+
+    echo "<div style='text-align:center; padding:10px; color:black'> Account Created! Please Login! </div>";
+    header('location:login.php');
+  } else {
+
+    echo "<script>
+        let para = document.getElementById('para');
+        para.innerHTML = '<div style=\"text-align:center; padding:10px; color:red\">Invalid Email.(Email should end with .com) Please try again</div>';
+    </script>";
+  }
 }
 
 

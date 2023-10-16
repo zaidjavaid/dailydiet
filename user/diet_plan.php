@@ -69,12 +69,24 @@ if (isset($_POST['generate'])) {
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
+            margin-left: 120px;
         }
 
-        .restsection {
+        /* .restsection {
             padding: 20px;
             margin: 20px auto;
             background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            max-width: 800px;
+        } */
+
+        .restsection {
+            padding: 20px;
+            margin: 20px 10px;
+            background-color: #44b09e;
+            background-color: white;
+            /* background-image: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%); */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
             max-width: 800px;

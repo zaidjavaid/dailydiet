@@ -99,6 +99,13 @@
 		height: 1000px;
 	}
 
+	.restsection h1 {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
 	/* styles.css */
 
 	.dashboard {
@@ -106,7 +113,10 @@
 		justify-content: space-around;
 		align-items: center;
 		padding: 20px;
-		background-color: #f0f0f0;
+		background-color: #44b09e;
+		background-color: #d7d7d7;
+		background-image: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
+		/* background-color: #f0f0f0; */
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	}
 
@@ -114,7 +124,9 @@
 		flex: 1;
 		text-align: center;
 		padding: 20px;
-		background-color: #fff;
+		/* background-color: #fff; */
+		background-color: #44b09e;
+		background-image: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%);
 		border-radius: 5px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	}

@@ -23,8 +23,8 @@
 
 				<div class="form-group">
 					<label>Goal </label>
-					<select class="form-control" name="goal">
-						<option> ----select Goal level----</option>
+					<select class="form-control" name="goal" required>
+						<option value="" required> ----select Goal level----</option>
 						<option>weight loss </option>
 						<option> muscle gain</option>
 					</select>
@@ -41,8 +41,8 @@
 
 			mysqli_query($con, "update users set goal='" . $_POST['goal'] . "' where email='" . $_SESSION['loggedInUser'] . "'");
 			echo "<div style='text-align:center; padding:10px; color:black'> goal added! </div>";
+			header("location:recommendations.php");
 		}
-
 
 		?>
 

@@ -61,8 +61,8 @@
 
 
 				<div class="form-group">
-					<label>Food Quanltity</label>
-					<input placeholder="100 gram" name="qnty" type="text" maxlength="3" minlength="1" id="Num" class="form-control" required>
+					<label>Food Quantity</label>
+					<input placeholder="100 gram" name="qnty" type="text" maxlength="4" minlength="1" id="Num1" class="form-control" required>
 				</div>
 
 

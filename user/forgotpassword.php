@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Custom CSS for the page -->
-    <style>
+    <!-- <style>
         body {
             font-family: Arial, sans-serif;
             /* background-color: #f8f9fa; */
@@ -60,6 +60,73 @@
         .form-group button:hover {
             /* background-color: #0056b3; */
             background-color: #ff8000;
+        }
+    </style> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #f8f9fa; */
+            /* background-color: #a5f5f2; */
+            background-color: #A58FC0;
+            /* background-color: lightcoral; */
+
+            /* background: rgb(2, 0, 36); */
+            /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(210, 210, 193, 1) 25%, rgba(79, 221, 201, 0.9856734930300245) 60%, rgba(0, 212, 255, 1) 100%); */
+        }
+
+        h2 {
+            color: green !important;
+
+        }
+
+        .forgot-form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            /* background-color: transparent; */
+            background-color: yellow;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 10px 100px / 120px 100px;
+            margin-top: 100px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: transparent;
+            border-bottom: 3px dashed white;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            /* background-color: #0056b3; */
+            background-color: #ff8000;
+
+            /* background: rgb(2, 0, 36); */
+            /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(210, 210, 193, 1) 25%, rgba(79, 221, 201, 0.9856734930300245) 60%, rgba(0, 212, 255, 1) 100%); */
+        }
+
+        .forgot-form h2 {
+            color: white;
+            font-weight: bold;
         }
     </style>
     <script>

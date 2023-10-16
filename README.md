@@ -1,4 +1,4 @@
-Certainly! Here's a sample README file for your "Daily Diet" project:
+ README file for our "Daily Diet" project:
 
 ```markdown
 # Daily Diet

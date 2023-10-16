@@ -19,38 +19,34 @@
 
 				<div class="form-group">
 					<label>Food Name</label>
-					<input type="text" name="foodname" class="form-control">
+					<input type="text" id="inputTextBox" required name="foodname" class="form-control">
 				</div>
+
 				<div class="form-group">
 					<label>Calories</label>
-					<input type="text" name="calories" class="form-control">
+					<input type="text" id="Num2" required name="calories" class="form-control" maxlength="4" minlength="1">
 				</div>
 
 
 				<div class="form-group">
 					<label>Protein</label>
-					<input type="text" name="protein" class="form-control">
+					<input type="text" id="Num3" required name="protein" class="form-control" maxlength="4" minlength="1">
 				</div>
-
-
-
-
-
 
 				<div class="form-group">
 					<label>Fats</label>
-					<input type="text" name="fats" class="form-control">
+					<input type="text" id="Num4" required name="fats" class="form-control" maxlength="4" minlength="1">
 				</div>
 
 
 				<div class="form-group">
 					<label>Carbohydrates</label>
-					<input type="text" name="carbohydrates" class="form-control">
+					<input type="text" id="Num5" name="carbohydrates" required class="form-control" maxlength="4" minlength="1">
 				</div>
 				<div class="form-group">
 					<label for="meal">Meal Type</label>
-					<select name="meal_type" id="meal" class="form-control">
-						<option value="Breakfast">Select Meal Type</option>
+					<select name="meal_type" id="meal" class="form-control" required>
+						<option value="" required>Select Meal Type</option>
 						<option value="Breakfast">Breakfast</option>
 						<option value="Lunch">Lunch</option>
 						<option value="Dinner">Dinner</option>
