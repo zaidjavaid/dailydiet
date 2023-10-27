@@ -18,7 +18,7 @@
     <form method="post" enctype="multipart/form-data">
 
       <h4>Update Profile Pic</h4>
-      <input type="file" name="filename"><br />
+      <input type="file" name="filename" accept=".jpg, .jpeg"><br />
 
       <input type="submit" name="btn" class="btn btn-info" value="Upload">
     </form>
@@ -113,7 +113,7 @@ if (isset($_POST['btn'])) {
   $source = $_FILES['filename']['tmp_name'];
   move_uploaded_file($source, $destination);
 
-  mysqli_query($con, "update users set img='$destination' where email='" . $_SESSION['loggedInUser'] . "'");
+  mysqli_query($con, "UPDATE users set img='$destination' where email='" . $_SESSION['loggedInUser'] . "'");
   header("Location: profile.php");
 }
 

@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    include('../dm/admin/db.php');
+    include('../dailydiet/admin/db.php');
     // Sanitize user inputs to prevent SQL injection
     $name = ucwords(mysqli_real_escape_string($con, $_POST['name']));
     $email = mysqli_real_escape_string($con, $_POST['email']);

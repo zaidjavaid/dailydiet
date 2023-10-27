@@ -41,7 +41,7 @@ ob_start();
         <input type="text" placeholder="Enter Your Name" name='name' id="inputTextBox" required/ class="all">
         <input type="email" placeholder="Enter Your Email" name='email' required/ class="all">
         <input type="number" placeholder="Enter Your Age" name='age' required/ class="all">
-        <input type="number" placeholder="Enter Your Weight" name='weight' required/ class="all">
+        <input type="number" placeholder="Enter Your Weight(kg)" name='weight' required/ class="all">
         <input type="number" placeholder="Enter Your Height(cm)" name='height' required/ class="all">
 
         Male <input type="radio" name="gender" value="male" checked>

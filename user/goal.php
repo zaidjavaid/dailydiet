@@ -20,7 +20,6 @@
 			<h1> My Goal </h1>
 
 			<form method="post">
-
 				<div class="form-group">
 					<label>Goal </label>
 					<select class="form-control" name="goal" required>
@@ -29,7 +28,6 @@
 						<option> muscle gain</option>
 					</select>
 				</div>
-
 				<input type="submit" name="btn" class="btn-danger btn form-control" value="Add ">
 			</form>
 		</div>
@@ -39,9 +37,10 @@
 		if (isset($_POST['btn'])) {
 			include('../admin/db.php');
 
-			mysqli_query($con, "update users set goal='" . $_POST['goal'] . "' where email='" . $_SESSION['loggedInUser'] . "'");
+			mysqli_query($con, "UPDATE users set goal='" . $_POST['goal'] . "' WHERE email='" . $_SESSION['loggedInUser'] . "'");
 			echo "<div style='text-align:center; padding:10px; color:black'> goal added! </div>";
-			header("location:recommendations.php");
+			header("location:BMR.php");
+			// header("location:recommendations.php");
 		}
 
 		?>

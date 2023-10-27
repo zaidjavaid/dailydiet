@@ -14,7 +14,6 @@
 
 		<?php
 		include('../admin/db.php');
-		include("../admin/db.php");
 		$res = mysqli_query($con, "SELECT * FROM users WHERE email='" . $_SESSION['loggedInUser'] . "'");
 		$r = mysqli_fetch_assoc($res);
 
@@ -26,12 +25,12 @@
 
 				<div class="form-group">
 					<label>Name</label>
-					<input type="text" name="name" class="form-control" value="<?php echo  $r['name']; ?>">
+					<input type="text" name="name" class="form-control" value="<?php echo  $r['name']; ?>" readonly>
 				</div>
 
 				<div class="form-group">
 					<label>Email</label>
-					<input type="text" name="email" class="form-control" value="<?php echo $r['email']; ?>">
+					<input type="text" name="email" class="form-control" value="<?php echo $r['email']; ?>" readonly>
 				</div>
 
 
