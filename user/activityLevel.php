@@ -36,7 +36,7 @@
 		if (isset($_POST['btn'])) {
 			include('../admin/db.php');
 
-			mysqli_query($con, "update users set activityLevel='" . $_POST['activityLevel'] . "' where email='" . $_SESSION['loggedInUser'] . "'");
+			mysqli_query($con, "UPDATE users set activityLevel='" . $_POST['activityLevel'] . "' WHERE email='" . $_SESSION['loggedInUser'] . "'");
 			echo "<div style='text-align:center; padding:10px; color:black'> activityLevel added! </div>";
 			header("location:goal.php");
 		}

@@ -37,8 +37,6 @@
 		<li><a href="goal.php">My Goal </a></li>
 
 
-		<!-- basal metabolic rate (BMR)  -->
-
 		</li>
 
 

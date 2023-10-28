@@ -44,14 +44,6 @@
 					<input type="text" name="weight" class="form-control" value="<?php echo  $r['weight']; ?>" placeholder="in kg">
 				</div>
 
-				<!--     <div class="form-group">
-	             	<label>BMI</label>
-	             	<input type="text" name="bmi" class="form-control"
-	             	 value="
-	             	 <?php //echo  $r['bmi']; 
-						?> 
-	             	 ">
-	            </div>  -->
 
 				<input type="submit" name="btn" value="Update" class="btn-success btn">
 			</form>

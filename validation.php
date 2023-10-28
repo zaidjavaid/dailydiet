@@ -17,7 +17,23 @@
     $(document).ready(function() {
 
         //name validation
-        $("#inputTextBox").keypress(function(event) {
+        $("#inputTextBox1").keypress(function(event) {
+            let inputValue = event.which;
+            // allow letters and whitespaces only.
+            if (!(inputValue >= 65 && inputValue <= 122) && (inputValue != 32 && inputValue != 0)) {
+                event.preventDefault();
+                //  method stops the default action of an element from happening. 
+            }
+        });
+        $("#inputTextBox2").keypress(function(event) {
+            let inputValue = event.which;
+            // allow letters and whitespaces only.
+            if (!(inputValue >= 65 && inputValue <= 122) && (inputValue != 32 && inputValue != 0)) {
+                event.preventDefault();
+                //  method stops the default action of an element from happening. 
+            }
+        });
+        $("#inputTextBox3").keypress(function(event) {
             let inputValue = event.which;
             // allow letters and whitespaces only.
             if (!(inputValue >= 65 && inputValue <= 122) && (inputValue != 32 && inputValue != 0)) {

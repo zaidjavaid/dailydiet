@@ -38,7 +38,7 @@ ob_start();
       <h1></h1>
       <h2>User Sign Up</h2>
       <form method='post'>
-        <input type="text" placeholder="Enter Your Name" name='name' id="inputTextBox" required/ class="all">
+        <input type="text" placeholder="Enter Your Name" name='name' id="inputTextBox3" required/ class="all">
         <input type="email" placeholder="Enter Your Email" name='email' required/ class="all">
         <input type="number" placeholder="Enter Your Age" name='age' required/ class="all">
         <input type="number" placeholder="Enter Your Weight(kg)" name='weight' required/ class="all">
@@ -74,7 +74,7 @@ if (isset($_POST['btn'])) {
 
     include('../admin/db.php');
 
-    mysqli_query($con, "insert into users (name,email, age, gender,pass,height,weight) value('" . ucwords($_POST['name']) . "', '" . $_POST['email'] . "', '" . $_POST['age'] . "', '" . $_POST['gender'] . "', '" . $_POST['pass'] . "', '" . $_POST['height'] . "', '" . $_POST['weight'] . "')");
+    mysqli_query($con, "INSERT into users (name,email, age, gender,pass,height,weight) value('" . ucwords($_POST['name']) . "', '" . $_POST['email'] . "', '" . $_POST['age'] . "', '" . $_POST['gender'] . "', '" . $_POST['pass'] . "', '" . $_POST['height'] . "', '" . $_POST['weight'] . "')");
 
     echo "<div style='text-align:center; padding:10px; color:black'> Account Created! Please Login! </div>";
     header('location:login.php');

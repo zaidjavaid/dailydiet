@@ -33,7 +33,7 @@
 
 				<div class="form-group">
 					<label>Add Image </label>
-					<input type="file" name="filename" class="form-control">
+					<input type="file" name="filename" class="form-control" accept=".jpg, .jpeg">
 				</div>
 				<div class="form-group">
 					<label>Description</label>

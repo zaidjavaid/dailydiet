@@ -71,7 +71,17 @@
         <th>Weight</th>
         <td> <?php echo $r['weight']; ?></td>
       </tr>
-      <!--  <tr><th>BMI</th> <td> <?php echo $r['bmi']; ?></td></tr> -->
+      <tr>
+
+        <?php
+        $weight = $r['weight'];
+        $height = $r['height'];
+        $height = ($height / 100);
+        $BMI = number_format($weight / ($height * $height), 3);
+        ?>
+        <th>BMI</th>
+        <td> <?php echo $BMI; ?></td>
+      </tr>
       <tr>
         <th>Activity Level</th>
         <td> <?php echo $r['activityLevel']; ?></td>

@@ -19,7 +19,7 @@
 
 				<div class="form-group">
 					<label>Food Name</label>
-					<input type="text" id="inputTextBox" required name="foodname" class="form-control">
+					<input type="text" id="inputTextBox2" required name="foodname" class="form-control">
 				</div>
 
 				<div class="form-group">
