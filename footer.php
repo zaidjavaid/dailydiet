@@ -20,13 +20,6 @@
       </ul>
     </div>
 
-
-
-
-
-
-
-
     <div class="all_info">
       <h4>Let Us Help You</h4>
       <ul>
